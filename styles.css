@@ -1,0 +1,18 @@
+#title {
+  background-color: #ff4c68;
+}
+
+.heading-title {
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 3rem;
+
+  /*font-family: 'Ubuntu', sans-serif;*/
+}
+
+.container {
+  padding: 3% 15%;
+}
+
+.fp-button {
+  font-family: "Ubuntu", sans-serif;
+}
