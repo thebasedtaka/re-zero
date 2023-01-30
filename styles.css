@@ -17,10 +17,6 @@ h2 {
   /*font-family: 'Ubuntu', sans-serif;*/
 }
 
-.container {
-  padding: 3% 15%;
-}
-
 .fp-button {
   font-family: "Ubuntu", sans-serif;
 }
@@ -50,8 +46,9 @@ h2 {
 
 /* title image */
 .title-image {
-  width: 70%;
+  width: 90%;
   transform: rotate(25deg);
+  position: relative;
 }
 
 .mid-p {
@@ -81,10 +78,24 @@ testimonial sec */
   color: #fff;
 }
 
+.cta {
+  width: 100%;
+  margin: 0 !important;
+  padding: 5%;
+  text-align: center;
+  background-color: #dd5a6e;
+  color: #fff;
+}
+
 .test-image {
   width: 10%;
   border-radius: 100%;
   margin: 20px;
+}
+
+.carousel-item {
+  width: 10%;
+  border-radius: 100%;
 }
 
 #press {
@@ -96,4 +107,42 @@ testimonial sec */
 .press-logo {
   width: 15%;
   margin: 20px 20px 50px;
+}
+#salecards {
+  padding: 5%;
+}
+
+.pricing-column {
+  padding: 5%;
+}
+.pricing-cards {
+  padding: 5%;
+}
+
+.features {
+  padding: 5% 10%;
+  background-color: #fff;
+  position: relative;
+}
+.center2 {
+  text-align: center !important;
+}
+
+@media (max-width: 1028px) {
+  .title-image {
+    transform: rotate(0deg);
+  }
+  .heading-title {
+    text-align: center;
+  }
+  .center {
+    text-align: center;
+  }
+  .container {
+    padding: 3% 1% 7% !important;
+  }
+}
+
+#footer {
+  padding-top: 10% !important;
 }
