@@ -2,6 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { json } = require("body-parser");
+const res = require("express/lib/response");
+const { response } = require("express");
 
 //global variables
 const app = express();
@@ -23,9 +25,18 @@ function parseWeather(json) {
   const { description } = json.weather[0];
 
   console.log(json);
-  return `in ${name} There are ${description} outside`;
+  const response = `<p>in ${name} There are ${description} outside</p>`;
+  return response;
 }
 
+function parseTemp(json) {
+  const { name } = json;
+  const { temp } = json.main;
+
+  console.log(json);
+  const response = `<p>in ${name} it is ${temp} degrees outside</p>`;
+  return response;
+}
 ////////////                       webapp                             //////////////
 
 //init
@@ -72,5 +83,10 @@ app.post("/WeatherApp", function (req, res) {
 
   getJson(
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
-  ).then((weatherData) => res.send(parseWeather(weatherData)));
+  ).then((weatherData) => {
+    res.write(parseWeather(weatherData));
+    res.write(parseTemp(weatherData));
+    res.write(JSON.stringify(req.body));
+    res.send();
+  });
 });
