@@ -1,0 +1,16 @@
+<%- include('partials/head.ejs')%>
+  <body>
+    <%-include('partials/navbar.ejs')%>
+    <h1>All the Cats</h1>
+    <ul>
+    <p><% cats.forEach(function(i) { %>
+        <li> <%= i %></li>
+      <%})%></li>
+    </p>
+    </ul>
+  </body>
+</html>
+
+cats.forEach(i=>{
+    i
+})
