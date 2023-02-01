@@ -1,12 +1,30 @@
 //imports
 const express = require("express");
 const bodyParser = require("body-parser");
+const { json } = require("body-parser");
 
 //global variables
 const app = express();
-
+const apiKey = "57081eba95cd93040b4a8c36eb7c1d8a";
 //declare
 app.use(bodyParser.urlencoded({ extended: true }));
+
+///function calls
+
+async function getJson(api) {
+  const data = await fetch(api);
+  const json = await data.json();
+
+  return json;
+}
+
+function parseWeather(json) {
+  const { name } = json;
+  const { description } = json.weather[0];
+
+  console.log(json);
+  return `in ${name} There are ${description} outside`;
+}
 
 ////////////                       webapp                             //////////////
 
@@ -35,11 +53,24 @@ app.get("/bmiCalculator", function (req, res) {
 });
 
 app.post("/bmiCalculator", function (req, res) {
-  let { weight } = req.body;
-  let { height } = req.body;
+  let { weight, height } = req.body;
 
   let bmi = +weight / (+height * +height);
 
   console.log(weight + height + bmi);
   res.send(`Your bmi is ${+bmi}`);
+});
+
+//weather app
+app.get("/WeatherApp", function (request, response) {
+  response.sendFile(__dirname + "/weather.html");
+});
+
+app.post("/WeatherApp", function (req, res) {
+  //43.731548 -79.762421
+  const { lat, lon } = req.body;
+
+  getJson(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+  ).then((weatherData) => res.send(parseWeather(weatherData)));
 });
