@@ -1,0 +1,24 @@
+import Accordion from "./components/Accordion";
+
+function App() {
+  const items = [
+    {
+      id: "fsa",
+      label: "Can i use react?",
+      content: "no you can't",
+    },
+    {
+      id: "gas",
+      label: "Can i use javascript?",
+      content: "no you can't",
+    },
+    {
+      id: "fah",
+      label: "Can i use css?",
+      content: "no you can't",
+    },
+  ];
+  return <Accordion items={items} />;
+}
+
+export default App;
