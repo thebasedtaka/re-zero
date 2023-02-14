@@ -5,17 +5,17 @@ function App() {
     {
       id: "fsa",
       label: "Can i use react?",
-      content: "no you can't",
+      content: "yes i can",
     },
     {
       id: "gas",
       label: "Can i use javascript?",
-      content: "no you can't",
+      content: "yes i can",
     },
     {
       id: "fah",
       label: "Can i use css?",
-      content: "no you can't",
+      content: "ill use tailwind instead",
     },
   ];
   return <Accordion items={items} />;
