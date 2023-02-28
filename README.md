@@ -1,7 +1,9 @@
 hiding the code for my small projects here
 
 reactSidebar
+
 ![image](https://user-images.githubusercontent.com/118682791/221739048-cd9b730c-1edd-4a68-acc9-d4eb627bdb05.png)
+
 This was a long project using react and javascript making a framework to create some interactable components and some buttons. 
 this project is hosted at https://micahcomp.netlify.app/
 The source code is located on the reactSidebar branch
@@ -12,6 +14,8 @@ This is a CRUD application that stores user data into a JSON file stored locally
 The source code is located on the imgSearch branch
 
 mapty
+
 ![image](https://user-images.githubusercontent.com/118682791/221744661-8748cf6b-da70-4fa5-91b8-42f6cb311102.png)
+
 vanilla javascript project using the open street map api to track workout locations. 
 The source code is located on the mapty branch
