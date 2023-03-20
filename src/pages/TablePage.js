@@ -1,4 +1,4 @@
-//import Table from "../components/Table";
+import Table from "../components/Table";
 import SortableTable from "../components/SortableTable";
 
 function TablePage() {
@@ -24,6 +24,11 @@ function TablePage() {
       render: (fruit) => fruit.score,
       header: () => <th className="bg-red-500">Score</th>,
       sortValue: (fruit) => fruit.score,
+    },
+    {
+      label: "Score Squared",
+      render: (fruit) => fruit.score ** 2,
+      sortValue: (fruit) => fruit.score ** 2,
     },
   ];
 
