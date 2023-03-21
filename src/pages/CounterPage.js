@@ -8,23 +8,23 @@ function useLogCount(initialCount) {
     console.log(count);
   }, [count]);
 
-  const handleClick = () => {
+  const increment = () => {
     setCount(count + 1);
   };
 
   return {
     count,
-    handleClick,
+    increment,
   };
 }
 
 function CounterPage({ initialCount }) {
-  const { count, handleClick } = useLogCount(initialCount);
+  const { count, increment } = useLogCount(initialCount);
 
   return (
     <div>
       <h1>Count is {count}</h1>
-      <Button onClick={handleClick}>increment</Button>
+      <Button onClick={increment}>increment</Button>
     </div>
   );
 }
