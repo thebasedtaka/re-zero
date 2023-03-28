@@ -25,3 +25,4 @@ mapty
 
 vanilla javascript project using the open street map api to track workout locations. 
 The source code is located on the mapty branch
+https://micahmap.netlify.app/
