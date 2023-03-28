@@ -5,6 +5,7 @@ Car Collection
 This is a React application that allows the user to list that cars they own and input the prices. it also allows search functionality for the cars in the list. 
 
 this project is hosted at https://micahcars.netlify.app/
+
 The source code is located on the cars branch
 
 
@@ -15,6 +16,7 @@ reactSidebar
 This was a long project using react and javascript making a framework to create some interactable components and some buttons along with a navbar on the side using tailwind to style. 
 
 this project is hosted at https://micahcomp.netlify.app/
+
 The source code is located on the reactSidebar branch
 
 imgSearch
@@ -31,4 +33,5 @@ mapty
 vanilla javascript project using the open street map api to track workout locations. 
 
 this project is hosted at https://micahmap.netlify.app/
+
 The source code is located on the mapty branch
